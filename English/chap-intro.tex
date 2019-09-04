@@ -1,0 +1,116 @@
+\chapter{Introduction}
+\pagenumbering{arabic}%
+
+As many books and articles about programming and software engineering
+point out, program code is primarily used as a means of communicating
+between software developers, and only incidentally as a means of
+giving instructions to a computer.
+
+A consequence of this primary use of software is that the way the code
+is written, i.e. its \emph{style}, influences the facility with which
+the communication takes place.  Clearly, for code that is being
+developed in collaboration with several people, it is desirable that
+the style of the code is such that its meaning is clearly and quickly
+communicated to people trying to understand it.
+
+A valid concern, then, is to find a style that every developer in a
+team can agree upon.  However, since developers come and go, and the
+code must be understandable to developers that are not yet part of the
+team, their preferences are not known, and can not be taken into
+account when a style is agreed upon.
+
+To find a solution to this conundrum, it helps to see the parallels
+between code and ordinary written text, and specifically text that is
+meant to communicate some technical or scientific subject between an
+author and one or more readers.  Authors of such texts simply adhere
+to conventions that are \emph{widely agreed upon}.  That way, they can
+be fairly certain that potential readers of their works have a very
+high probability of understanding the structure of phrases and
+sentences.  Though to understand the full meaning of the text, the
+reader must obviously also know the subject that is being written
+about.
+
+Let us investigate the nature of such widely agreed upon conventions,
+and how they become shared to such a high degree.  
+
+Style conventions vary from one language to another.  These variations
+can be in typography.  In French typography, for instance, a word and
+a following colon are separated by a thin space, but not so in
+English.  In German, nouns are capitalized, but not in most other
+languages.  But in particular, there are variations in how phrases are
+built.  In English you can say ``I was my hands'', whereas in French,
+the equivalent phrase (translated into English) would be ``I me wash
+the hands'', and in Swedish it would be ``I was the hands [on me]''.
+
+To understand more about style conventions in various languages, it
+helps to distinguish between phrases that are \emph{grammatical} and
+phrases that are \emph{idiomatic}, and the set of idiomatic phrases is
+tiny compared to the set of grammatical phrases.  For some language
+such as English, in the first category you will find phrases that
+appear as examples in a typical grammar book for that language.
+However, whereas most people agree that those phrases are valid, most
+of them would never be uttered by anyone.  For a concrete example, in
+English, you may say something like ``After a meal, I use my tooth
+brush, some tooth paste, and some dental floss so as to avoid having
+to see the dentist too often'', and this is an idiomatic phrase.  But
+the phrase ``After a meal, I use my dental brush, my dental paste, and
+some tooth thread so as to avoid having to see the tooth doctor too
+often''.  The latter phrase is grammatical, but it is not idiomatic.
+Notice in particular that the choice of words, in this case between
+\emph{tooth brush} and \emph{dental brush}, between \emph{dentist} and
+\emph{tooth doctor} is completely arbitrary.  Only historical reasons
+can explain why one word is acceptable and another word is not.  For
+this reason, it is often futile to ask \emph{why} a particular style
+is better than some other style.
+
+A situation similar to that of natural languages also holds for
+programming languages.  The grammatical phases of a programming
+language are those statements and expressions that the compiler must
+accept, according to the specification of the language.  The vast
+majority of the grammatical phrases of a programming language are not
+idiomatic and should not be used in real code.  Just as with natural
+languages, the reason a particular phrase is idiomatic is often just
+an accident of history.  It is idiomatic not for a particular
+intrinsic reason, but just because it is historically what people have
+come to agree upon.  The purpose of a style guide, like this one, is
+to examine this difference between phrases that are simply
+grammatical, and phrases that are also idiomatic.
+
+Style conventions vary over time, and this is normal, both for written
+text and for code.  Changes are often very slow, so they are not
+always noticed.  However, a comparison between a recent text or
+program and one that was written a few decades ago, can be quite
+revealing.
+
+For ordinary text, most people are exposed to a vast set of texts in
+the form of books and articles.  Therefore, most people are constantly
+exposed to works that adhere to the same style conventions.  As a
+consequence, these style conventions do not have to be explicitly
+pointed out for most people to know them anyway.  Unfortunately,
+however, in software development we are faced with teams of developers
+with very little experience in reading and understanding code written
+by people other than themselves.  There are several reasons for this
+undesirable situation.  First, programmers are exposed to code written
+by others much later in life than is the case for ordinary text.
+Second, courses in programming do not emphasize the necessity of
+reading code written by others.  Third, individual software developers
+do not routinely read much code written by others.
+
+Because of this lack of exposure to code written by others, we think
+that a style guide like this one can be of great help to software
+developers.  Ordinarily, a style guide consists mainly of a collection
+of rules of what to write and what not to write.  We go one step
+further.  When there is a reason for a particular rule, in terms of
+how it helps the person reading the code understand it better or
+faster, we try to point out this particular reason.  Furthermore, we
+try to give references to existing code or to the literature, so that
+it is clear that the rules we show are not just our own preferences.
+And, when alternative style conventions exist, we point this out,
+rather than insisting on one particular alternative.
+
+\section{Conventions in this style guide}
+
+We use \emph{the author} to mean the person who wrote some piece of
+code, and we use \emph{the maintainer} to mean the person who tries to
+understand the code written by the author, in order to understand that
+code, or perhaps even to modify it in various ways.

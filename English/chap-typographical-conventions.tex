@@ -1,0 +1,52 @@
+\chapter{Typographical conventions}
+
+\section{Width of a line of code}
+
+Horizontal space is a precious resource that should not be wasted.
+The width of a line should preferably not exceed 80 characters.  This
+limit used to be hard, because some printers or printer drivers would
+truncate longer lines.  Since it is less common to print code these
+days, the limit is now soft.  The purpose of keeping lines somewhat
+short is so that it is possible on a reasonable monitor to display two
+documents side by side.  One document is typically a \commonlisp{}
+source file, and the other document is typically the buffer containing
+interactions with the \commonlisp{} system.
+
+The systematic use of long lines makes the practice of displaying two
+documents side by side impossible, or at least impractical.  If a
+single monitor is used, the programmer then has to flip back and forth
+between the source code and the interaction loop.  When two monitors
+are used, the effect is to waste half a monitor that could otherwise
+be used for displaying documentation or something else.
+
+\section{Commenting}
+
+Use a single semicolon to introduce a comment that follows the code on
+a line.  Use two semicolons for comments that are not at the top level
+in a file and that should be aligned with the code that it comments
+on.  Use three semicolons for top-level comments that concern some
+top-level forms in a file, but not the entire file.  Use four
+semicolons for comments that concern the entire file.
+
+\section{Blank lines}
+
+A single blank line is common in the following situations:
+
+\begin{itemize}
+\item Between two top-level forms.
+\item Between a file-specific comment and the following top-level
+  form.
+\item Between a comment for several top-level forms and the first
+  of those top-level forms.
+\end{itemize}
+
+\section{Spacing}
+
+All modern \commonlisp{} code adheres to the spacing conventions in
+this section.
+
+An opening parenthesis is never followed by whitespace, and a closing
+parenthesis is never preceded by whitespace.  As a consequence, a
+closing parenthesis is never by itself on a line. 
+
+\section{Indentation}
