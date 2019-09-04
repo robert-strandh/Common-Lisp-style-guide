@@ -50,3 +50,67 @@ parenthesis is never preceded by whitespace.  As a consequence, a
 closing parenthesis is never by itself on a line. 
 
 \section{Indentation}
+
+When a form does not fit on a single line, the lines other than the
+first one must be \emph{indented} relative to the beginning of the
+first one.  The exact indentation depends on the operator of the
+form.
+
+If a \emph{function call form} does not fit on a single line, there
+are several possible ways of indenting the subsequent lines.  If the
+name of the function is very long, but all the arguments will fit on a
+line by itself, all the arguments can be put on a second line, like
+this:
+
+\begin{verbatim}
+(very-long-function-name
+ argument-1 argument-2 ... argument-n)
+\end{verbatim}
+
+The list of arguments is indented a single position compared to the
+first line of the form.
+
+If the argument forms of a function-call form do not all fit on a line
+by themselves, but the function name and the longest argument form
+will, then the following style is preferable:
+
+\begin{verbatim}
+(very-long-function-name argument-1
+                         argument-2
+                         ...
+                         argument-n)
+\end{verbatim}
+
+The first argument form is placed after the function name on the first
+line and the remaining argument forms are placed each on a subsequent
+line, aligned with the first argument form.
+
+When the function takes keyword arguments, each line may contain both
+the keyword and the value, like this:
+
+\begin{verbatim}
+(very-long-function-name required-argument-1
+                         required-argument-2
+                         ...
+                         required-argument-m
+                         :keyword-1 value-1
+                         :keyword-2 value-2
+                         ...
+                         :keyword-n value-n)
+\end{verbatim}
+
+For some standard functions that take a single required argument
+followed by a number of keyword arguments, in particular
+\texttt{make-instance}, the following style can save a significant
+amount of horizontal space:
+
+\begin{verbatim}
+(make-instance 'class-name
+  :initarg-1 value-1
+  :initarg-2 value-2
+  ...
+  :initarg-n value-n)
+\end{verbatim}
+
+This style is especially useful when the value forms are themselves
+compound forms that occupy a significant amount of horizontal space.
