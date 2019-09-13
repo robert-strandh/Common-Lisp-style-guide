@@ -81,14 +81,14 @@ The list of arguments is indented a single position compared to the
 first line of the form.
 
 If the argument forms of a function-call form do not all fit on a line
-by themselves, but the function name and the longest argument form
-will, then the following style is preferable:
+by themselves, then the following style is preferable:
 
 \begin{verbatim}
-(very-long-function-name argument-1
-                         argument-2
-                         ...
-                         argument-n)
+(very-long-function-name
+  argument-1
+  argument-2
+  ...
+  argument-n)
 \end{verbatim}
 
 The first argument form is placed after the function name on the first
@@ -99,14 +99,15 @@ When the function takes keyword arguments, each line may contain both
 the keyword and the value, like this:
 
 \begin{verbatim}
-(very-long-function-name required-argument-1
-                         required-argument-2
-                         ...
-                         required-argument-m
-                         :keyword-1 value-1
-                         :keyword-2 value-2
-                         ...
-                         :keyword-n value-n)
+(very-long-function-name
+  required-argument-1
+  required-argument-2
+  ...
+  required-argument-m
+  :keyword-1 value-1
+  :keyword-2 value-2
+  ...
+  :keyword-n value-n)
 \end{verbatim}
 
 For some standard functions that take a single required argument
